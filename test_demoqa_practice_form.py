@@ -25,7 +25,7 @@ def test_practice_form():
     browser.element('#submit').click()
 
 
-    browser.element('.table-responsive').should(have.texts('Ivan Ivanov'))
+    browser.element('.table-responsive').should(have.text('Ivan Ivanov'))
     browser.element('.table-responsive').should(have.text('ivan_ivanov@yandex.ru'))
     browser.element('.table-responsive').should(have.text('Male'))
     browser.element('.table-responsive').should(have.text('9481234587'))
