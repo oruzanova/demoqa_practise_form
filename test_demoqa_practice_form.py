@@ -1,5 +1,6 @@
 import pytest
 from selene import browser, have
+import os
 
 def test_practice_form():
     browser.open('/automation-practice-form')
@@ -15,7 +16,7 @@ def test_practice_form():
     browser.element(".react-datepicker__day.react-datepicker__day--013").click()
     browser.element('#subjectsInput').type('Maths').press_enter()
     browser.element('[for="hobbies-checkbox-2"]').click()
-    browser.element('#uploadPicture').set_value('./python.jpg')
+    browser.element('#uploadPicture').set_value(os.path.abspath('python.jpg'))
     browser.element('#currentAddress').type('John Doe 123 Main Street Anytown, CA 90210 USA')
     browser.element("#state").click()
     browser.element('#react-select-3-option-1').click()
